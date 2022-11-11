@@ -63,7 +63,7 @@ public class RegistroInventario extends javax.swing.JInternalFrame {
             }
         });
 
-        cmbTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fruta y Verdura", "Grasas", "Hidratos de Carbono" }));
+        cmbTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Fruta y Verdura", "Grasas", "Hidratos de Carbono" }));
 
         btnAgregar1.setText("Agregar/Modificar");
         btnAgregar1.addActionListener(new java.awt.event.ActionListener() {
