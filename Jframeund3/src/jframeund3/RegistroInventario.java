@@ -63,7 +63,7 @@ public class RegistroInventario extends javax.swing.JInternalFrame {
             }
         });
 
-        cmbTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fruta y Verdura", "Grasas", "Hidratos de Carbono", " " }));
+        cmbTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Fruta y Verdura", "Grasas", "Hidratos de Carbono" }));
 
         btnAgregar1.setText("Agregar/Modificar");
         btnAgregar1.addActionListener(new java.awt.event.ActionListener() {
@@ -88,10 +88,7 @@ public class RegistroInventario extends javax.swing.JInternalFrame {
 
         tblInventario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "Nombre", "Tipo", "Cantidad"
@@ -135,9 +132,9 @@ public class RegistroInventario extends javax.swing.JInternalFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnAgregar1)
-                        .addGap(98, 98, 98)
+                        .addGap(62, 62, 62)
                         .addComponent(btnEliminar1)
-                        .addGap(112, 112, 112)
+                        .addGap(148, 148, 148)
                         .addComponent(btnCerrar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
@@ -180,9 +177,9 @@ public class RegistroInventario extends javax.swing.JInternalFrame {
                     .addComponent(btnCerrar)
                     .addComponent(btnEliminar1)
                     .addComponent(btnAgregar1))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addGap(105, 105, 105)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
@@ -193,8 +190,7 @@ public class RegistroInventario extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtCantidadActionPerformed
 
     private void btnAgregar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregar1ActionPerformed
-
-                
+        
         if (filaSeleccionada == -1) {
             inventario[0] = txtNombre.getText();
             inventario[1] = cmbTipo.getSelectedItem();
@@ -207,7 +203,6 @@ public class RegistroInventario extends javax.swing.JInternalFrame {
             tblInventario.setValueAt(Integer.parseInt(txtCantidad.getText()), filaSeleccionada, 2);
             
             filaSeleccionada = -1;
-
         }
     }//GEN-LAST:event_btnAgregar1ActionPerformed
 
